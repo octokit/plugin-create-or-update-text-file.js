@@ -1,5 +1,8 @@
 {
   "name": "@octokit/plugin-create-or-update-text-file",
+  "publishConfig": {
+    "access": "public"
+  },
   "version": "0.0.0-development",
   "description": "Convenience method to create/edit/delete a text file based on its current content",
   "scripts": {
@@ -11,10 +14,7 @@
   },
   "repository": "https://github.com/octokit/plugin-create-or-update-text-file.js",
   "keywords": [
-    "github",
-    "api",
-    "sdk",
-    "toolkit"
+    "octokit-plugin"
   ],
   "author": "Gregor Martynus (https://dev.to/gr2m)",
   "license": "MIT",
@@ -98,7 +98,9 @@
       ]
     ]
   },
-  "publishConfig": {
-    "access": "public"
+  "renovate": {
+    "extends": [
+      "github>octokit/.github"
+    ]
   }
 }
