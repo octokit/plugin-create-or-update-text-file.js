@@ -70,7 +70,7 @@ const {
 ### Create custom Octokit contructor with plugin
 
 ```js
-const MyOctokit = Octokit.plugin(paginateRest);
+const MyOctokit = Octokit.plugin(createOrUpdateTextFile);
 const octokit = new MyOctokit({ auth: "secret123" });
 ```
 
