@@ -84,7 +84,7 @@ export async function getFileContents(
       sha: data.sha,
     };
   } catch (error) {
-    /* istanbul ignore if */
+    /* istanbul ignore next */
     if (error.message !== "URI malformed") throw error;
 
     /* istanbul ignore next error is only thrown in browsers, not node. */
