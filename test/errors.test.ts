@@ -76,11 +76,11 @@ describe("README usage examples", () => {
 
   // https://css-tricks.com/snippets/html/base64-encode-of-1x1px-transparent-gif/
   const BLACK_GIF_BASE64 = "R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=";
-  test("path is binary file", async () => {
+  test.skip("path is binary file", async () => {
     const mock = fetchMock
       .sandbox()
 
-      // file is a folder
+      // file is a binary file
       .getOnce(
         "https://api.github.com/repos/octocat/hello-world/contents/test.txt",
         {
