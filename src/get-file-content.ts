@@ -48,6 +48,7 @@ export async function getFileContents(
         data: {
           content: null,
           type: "",
+          sha: "",
         },
       };
     });
@@ -62,7 +63,7 @@ export async function getFileContents(
     );
   }
 
-  if (!("content" in data)) {
+  if (!("sha" in data && "content" in data)) {
     throw new RequestError(
       `[@octokit/plugin-create-or-update-text-file] ${requestOptions.url} is not a file, but a ${data.type}`,
       403,
