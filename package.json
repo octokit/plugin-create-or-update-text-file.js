@@ -20,7 +20,7 @@
   "license": "MIT",
   "dependencies": {
     "@octokit/request-error": "^2.0.5",
-    "@octokit/types": "^6.12.2",
+    "@octokit/types": "^6.16.1",
     "i": "^0.3.6",
     "npm": "^7.14.0"
   },
