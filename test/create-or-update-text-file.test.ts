@@ -290,3 +290,26 @@ describe("README usage examples", () => {
     expect(data).toStrictEqual({ ok: true });
   });
 });
+
+// TODO: add test for browsers
+// https://github.com/octokit/plugin-create-or-update-text-file.js/issues/15#issuecomment-840734343
+// example response
+//
+//     {
+//       "name": "update-prettier.yml",
+//       "path": ".github/workflows/update-prettier.yml",
+//       "sha": "c5ce51905f4941cfce3ee663113f4dbda080570c",
+//       "size": 650,
+//       "url": "https://api.github.com/repos/wolfy1339/test-repository/contents/.github/workflows/update-prettier.yml?ref=6c46223b6d3464bb5d17773d42ad557524e56d2c",
+//       "html_url": "https://github.com/wolfy1339/test-repository/blob/6c46223b6d3464bb5d17773d42ad557524e56d2c/.github/workflows/update-prettier.yml",
+//       "git_url": "https://api.github.com/repos/wolfy1339/test-repository/git/blobs/c5ce51905f4941cfce3ee663113f4dbda080570c",
+//       "download_url": "https://raw.githubusercontent.com/wolfy1339/test-repository/6c46223b6d3464bb5d17773d42ad557524e56d2c/.github/workflows/update-prettier.yml",
+//       "type": "file",
+//       "content": "bmFtZTogVXBkYXRlIFByZXR0aWVyCiJvbiI6CiAgcHVzaDoKICAgIGJyYW5j\naGVzOgogICAgICAtIGRlcGVuZGFib3QvbnBtX2FuZF95YXJuL3ByZXR0aWVy\nLSoKam9iczoKICB1cGRhdGVfcHJldHRpZXI6CiAgICBydW5zLW9uOiB1YnVu\ndHUtbGF0ZXN0CiAgICBzdGVwczoKICAgICAgLSB1c2VzOiBhY3Rpb25zL2No\nZWNrb3V0QHYyCiAgICAgIC0gdXNlczogYWN0aW9ucy9zZXR1cC1ub2RlQHYy\nCiAgICAgICAgd2l0aDoKICAgICAgICAgIG5vZGUtdmVyc2lvbjogMTIueAog\nICAgICAtIHJ1bjogbnBtIGNpCiAgICAgIC0gcnVuOiAibnBtIHJ1biBsaW50\nOmZpeCIKICAgICAgLSB1c2VzOiBncjJtL2NyZWF0ZS1vci11cGRhdGUtcHVs\nbC1yZXF1ZXN0LWFjdGlvbkB2MS54CiAgICAgICAgZW52OgogICAgICAgICAg\nR0lUSFVCX1RPS0VOOiAiJHt7IHNlY3JldHMuT0NUT0tJVEJPVF9QQVQgfX0i\nCiAgICAgICAgd2l0aDoKICAgICAgICAgIHRpdGxlOiBQcmV0dGllciB1cGRh\ndGVkCiAgICAgICAgICBib2R5OiBBbiB1cGRhdGUgdG8gcHJldHRpZXIgcmVx\ndWlyZWQgdXBkYXRlcyB0byB5b3VyIGNvZGUuCiAgICAgICAgICBicmFuY2g6\nICIke3sgZ2l0aHViLnJlZiB9fSIKICAgICAgICAgIGNvbW1pdC1tZXNzYWdl\nOiAic3R5bGU6IHByZXR0aWVyIgo=\n",
+//       "encoding": "base64",
+//       "_links": {
+//         "self": "https://api.github.com/repos/wolfy1339/test-repository/contents/.github/workflows/update-prettier.yml?ref=6c46223b6d3464bb5d17773d42ad557524e56d2c",
+//         "git": "https://api.github.com/repos/wolfy1339/test-repository/git/blobs/c5ce51905f4941cfce3ee663113f4dbda080570c",
+//         "html": "https://github.com/wolfy1339/test-repository/blob/6c46223b6d3464bb5d17773d42ad557524e56d2c/.github/workflows/update-prettier.yml"
+//       }
+//     }
