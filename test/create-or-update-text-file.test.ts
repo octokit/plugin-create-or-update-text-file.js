@@ -289,6 +289,61 @@ describe("README usage examples", () => {
     expect(updated).toEqual(true);
     expect(data).toStrictEqual({ ok: true });
   });
+
+  it("Creates file with static content if file exists at given path and branch", async () => {
+    const mock = fetchMock
+      .sandbox()
+
+      // file exists
+      .getOnce(
+        "https://api.github.com/repos/octocat/hello-world/contents/test.txt?ref=custom-branch",
+        {
+          body: {
+            content: utf8ToBase64("current content"),
+            sha: "sha123",
+            ref: "custom-branch",
+          },
+          status: 200,
+        }
+      )
+
+      // update file
+      .putOnce(
+        "https://api.github.com/repos/octocat/hello-world/contents/test.txt",
+        {
+          body: {
+            ok: true,
+          },
+          status: 200,
+        },
+        {
+          body: {
+            content: utf8ToBase64("content here"),
+            message: "update test.txt",
+            sha: "sha123",
+            branch: "custom-branch",
+          },
+        }
+      );
+
+    const octokit = new MyOctokit({
+      request: {
+        fetch: mock,
+      },
+    });
+
+    const { updated, data } = await octokit.createOrUpdateTextFile({
+      owner: "octocat",
+      repo: "hello-world",
+      path: "test.txt",
+      content: "content here",
+      message: "update test.txt",
+      branch: "custom-branch",
+    });
+
+    expect(updated).toEqual(true);
+    expect(data).toStrictEqual({ ok: true });
+  });
 });
 
 // TODO: add test for browsers
