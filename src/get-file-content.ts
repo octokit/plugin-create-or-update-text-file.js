@@ -9,6 +9,13 @@ type Options = {
   branch?: string;
 };
 
+type GetContentsParameters = {
+  owner: string;
+  repo: string;
+  path: string;
+  ref?: string;
+};
+
 type Result = {
   content: string | null;
   sha?: string;
@@ -36,10 +43,17 @@ export async function getFileContents(
   options: Options
 ): Promise<Result> {
   const route = "GET /repos/{owner}/{repo}/contents/{path}";
-  const requestOptions = octokit.request.endpoint(route, options);
+
+  const { branch, ...parameters } = options;
+  const getContentsParameters: GetContentsParameters = {
+    ...parameters,
+    ref: branch,
+  };
+
+  const requestOptions = octokit.request.endpoint(route, getContentsParameters);
 
   const { data } = await octokit
-    .request(route, options)
+    .request(route, getContentsParameters)
     .catch((error: RequestError) => {
       /* istanbul ignore if */
       if (error.status !== 404) throw error;
