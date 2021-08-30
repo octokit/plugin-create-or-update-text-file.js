@@ -98,7 +98,7 @@ export async function getFileContents(
       content: base64ToUtf8(data.content),
       sha: data.sha,
     };
-  } catch (error) {
+  } catch (error: any) {
     /* istanbul ignore next */
     if (error.message !== "URI malformed") throw error;
 
