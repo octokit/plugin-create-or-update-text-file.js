@@ -1,4 +1,4 @@
-import * as fetchMock from "fetch-mock";
+import fetchMock from "fetch-mock";
 import { Octokit } from "@octokit/core";
 
 import { createOrUpdateTextFile } from "../src";
