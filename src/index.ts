@@ -2,10 +2,10 @@ import { Octokit } from "@octokit/core";
 
 import { composeCreateOrUpdateTextFile } from "./compose-create-or-update-text-file";
 import { VERSION } from "./version";
-import { Options } from "./types";
+import type { Options } from "./types";
 
 export { composeCreateOrUpdateTextFile } from "./compose-create-or-update-text-file";
-export { Options, Response, ContentUpdateFunction } from "./types";
+export type { Options, Response, ContentUpdateFunction } from "./types";
 
 /**
  * @param octokit Octokit instance

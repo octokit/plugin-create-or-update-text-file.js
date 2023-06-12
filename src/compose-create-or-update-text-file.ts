@@ -1,7 +1,7 @@
 import { Octokit } from "@octokit/core";
 
 import { getFileContents } from "./get-file-content";
-import { Options, Response, ContentUpdateFunctionOptions } from "./types";
+import type { Options, Response, ContentUpdateFunctionOptions } from "./types";
 import { utf8ToBase64 } from "./utils";
 
 /**
