@@ -34,15 +34,15 @@ Browsers
 
 </th><td width=100%>
 
-Load `@octokit/plugin-create-or-update-text-file` and [`@octokit/core`](https://github.com/octokit/core.js) (or core-compatible module) directly from [cdn.pika.dev](https://cdn.pika.dev)
+Load `@octokit/plugin-create-or-update-text-file` and [`@octokit/core`](https://github.com/octokit/core.js) (or core-compatible module) directly from [esm.sh](https://esm.sh)
 
 ```html
 <script type="module">
-  import { Octokit } from "https://cdn.pika.dev/@octokit/core";
+  import { Octokit } from "https://esm.sh/@octokit/core";
   import {
     createOrUpdateTextFile,
     composeCreateOrUpdateTextFile,
-  } from "https://cdn.pika.dev/@octokit/plugin-create-or-update-text-file";
+  } from "https://esm.sh/@octokit/plugin-create-or-update-text-file";
 </script>
 ```
 
