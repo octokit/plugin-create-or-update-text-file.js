@@ -28,7 +28,7 @@ export type ContentUpdateFunctionOptions =
     };
 
 export type ContentUpdateFunction = (
-  options: ContentUpdateFunctionOptions
+  options: ContentUpdateFunctionOptions,
 ) => string | null | Promise<string | null>;
 
 export type Response =

@@ -36,8 +36,8 @@ function browserUtf8ToBase64(data: string) {
       function toSolidBytes(_match, p1) {
         // @ts-expect-error - we know what we are doing here
         return String.fromCharCode("0x" + p1);
-      }
-    )
+      },
+    ),
   );
 }
 
@@ -49,7 +49,7 @@ function browserBase64ToUtf8(data: string) {
       .map(function (c) {
         return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
       })
-      .join("")
+      .join(""),
   );
 }
 

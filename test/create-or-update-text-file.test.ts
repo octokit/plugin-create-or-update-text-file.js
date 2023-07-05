@@ -19,7 +19,7 @@ describe("README usage examples", () => {
         {
           body: {},
           status: 404,
-        }
+        },
       )
 
       // create file
@@ -36,7 +36,7 @@ describe("README usage examples", () => {
             content: utf8ToBase64("content here"),
             message: "update test.txt",
           },
-        }
+        },
       );
 
     const octokit = new MyOctokit({
@@ -70,7 +70,7 @@ describe("README usage examples", () => {
             sha: "sha123",
           },
           status: 200,
-        }
+        },
       )
 
       // update file
@@ -88,7 +88,7 @@ describe("README usage examples", () => {
             message: "update test.txt",
             sha: "sha123",
           },
-        }
+        },
       );
 
     const octokit = new MyOctokit({
@@ -119,7 +119,7 @@ describe("README usage examples", () => {
         {
           body: {},
           status: 404,
-        }
+        },
       );
 
     const octokit = new MyOctokit({
@@ -154,7 +154,7 @@ describe("README usage examples", () => {
             sha: "sha123",
           },
           status: 200,
-        }
+        },
       )
 
       // delete file
@@ -171,7 +171,7 @@ describe("README usage examples", () => {
             sha: "sha123",
             message: "delete test.txt",
           },
-        }
+        },
       );
 
     const octokit = new MyOctokit({
@@ -205,7 +205,7 @@ describe("README usage examples", () => {
         {
           body: {},
           status: 404,
-        }
+        },
       );
 
     const octokit = new MyOctokit({
@@ -245,7 +245,7 @@ describe("README usage examples", () => {
             sha: "sha123",
           },
           status: 200,
-        }
+        },
       )
 
       // update file
@@ -263,7 +263,7 @@ describe("README usage examples", () => {
             message: "update test.txt",
             sha: "sha123",
           },
-        }
+        },
       );
 
     const octokit = new MyOctokit({
@@ -304,7 +304,7 @@ describe("README usage examples", () => {
             ref: "custom-branch",
           },
           status: 200,
-        }
+        },
       )
 
       // update file
@@ -323,7 +323,7 @@ describe("README usage examples", () => {
             sha: "sha123",
             branch: "custom-branch",
           },
-        }
+        },
       );
 
     const octokit = new MyOctokit({

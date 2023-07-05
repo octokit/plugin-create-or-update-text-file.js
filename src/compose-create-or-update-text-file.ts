@@ -11,7 +11,7 @@ import { utf8ToBase64 } from "./utils";
  */
 export async function composeCreateOrUpdateTextFile(
   octokit: Octokit,
-  options: Options
+  options: Options,
 ): Promise<Response> {
   const {
     content: contentOrFn,
@@ -50,7 +50,7 @@ export async function composeCreateOrUpdateTextFile(
         ...getOptions,
         message,
         sha: currentFile.sha,
-      }
+      },
     );
 
     return {
@@ -69,7 +69,7 @@ export async function composeCreateOrUpdateTextFile(
       message,
       ...currentFile,
       content: utf8ToBase64(content as string),
-    }
+    },
   );
 
   return {

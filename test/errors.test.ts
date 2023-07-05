@@ -18,7 +18,7 @@ describe("README usage examples", () => {
         {
           body: [],
           status: 200,
-        }
+        },
       );
 
     const octokit = new MyOctokit({
@@ -34,9 +34,9 @@ describe("README usage examples", () => {
         path: "test.txt",
         content: "content here",
         message: "update test.txt",
-      })
+      }),
     ).rejects.toThrow(
-      "[@octokit/plugin-create-or-update-text-file] https://api.github.com/repos/octocat/hello-world/contents/test.txt is a directory"
+      "[@octokit/plugin-create-or-update-text-file] https://api.github.com/repos/octocat/hello-world/contents/test.txt is a directory",
     );
   });
 
@@ -52,7 +52,7 @@ describe("README usage examples", () => {
             type: "symlink",
           },
           status: 200,
-        }
+        },
       );
 
     const octokit = new MyOctokit({
@@ -68,9 +68,9 @@ describe("README usage examples", () => {
         path: "test.txt",
         content: "content here",
         message: "update test.txt",
-      })
+      }),
     ).rejects.toThrow(
-      "[@octokit/plugin-create-or-update-text-file] https://api.github.com/repos/octocat/hello-world/contents/test.txt is not a file, but a symlink"
+      "[@octokit/plugin-create-or-update-text-file] https://api.github.com/repos/octocat/hello-world/contents/test.txt is not a file, but a symlink",
     );
   });
 
@@ -89,7 +89,7 @@ describe("README usage examples", () => {
             content: BLACK_GIF_BASE64,
           },
           status: 200,
-        }
+        },
       );
 
     const octokit = new MyOctokit({
@@ -105,7 +105,7 @@ describe("README usage examples", () => {
         path: "test.txt",
         content: "content here",
         message: "update test.txt",
-      })
+      }),
     ).rejects.toThrow("[@octokit/plugin-create-or-update-text-file]");
   });
 });
