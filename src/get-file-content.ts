@@ -40,7 +40,7 @@ type Result = {
  */
 export async function getFileContents(
   octokit: Octokit,
-  options: Options
+  options: Options,
 ): Promise<Result> {
   const route = "GET /repos/{owner}/{repo}/contents/{path}";
 
@@ -73,7 +73,7 @@ export async function getFileContents(
       403,
       {
         request: requestOptions,
-      }
+      },
     );
   }
 
@@ -83,7 +83,7 @@ export async function getFileContents(
       403,
       {
         request: requestOptions,
-      }
+      },
     );
   }
 
@@ -108,7 +108,7 @@ export async function getFileContents(
       403,
       {
         request: requestOptions,
-      }
+      },
     );
   }
 }
