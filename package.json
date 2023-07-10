@@ -38,7 +38,7 @@
     "typescript": "^5.0.0"
   },
   "peerDependencies": {
-    "@octokit/core": ">= 3"
+    "@octokit/core": ">= 5"
   },
   "jest": {
     "transform": {
