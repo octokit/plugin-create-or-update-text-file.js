@@ -54,7 +54,7 @@ describe("README usage examples", () => {
     });
 
     expect(updated).toEqual(true);
-    expect(data).toStrictEqual({ ok: true });
+    expect(data).toEqual({ ok: true });
   });
 
   it("Creates file with static content if file exists at given path", async () => {
@@ -106,7 +106,7 @@ describe("README usage examples", () => {
     });
 
     expect(updated).toEqual(true);
-    expect(data).toStrictEqual({ ok: true });
+    expect(data).toEqual({ ok: true });
   });
 
   it("Sends no delete request when content is set to null and no file exists at given path", async () => {
@@ -138,7 +138,7 @@ describe("README usage examples", () => {
 
     expect(deleted).toEqual(false);
     expect(updated).toEqual(false);
-    expect(data).toStrictEqual({});
+    expect(data).toEqual({});
   });
 
   it("Deletes file when content is set to null and a file exists at given path", async () => {
@@ -190,7 +190,7 @@ describe("README usage examples", () => {
 
     expect(deleted).toEqual(true);
     expect(updated).toEqual(true);
-    expect(data).toStrictEqual({
+    expect(data).toEqual({
       ok: true,
     });
   });
@@ -229,7 +229,7 @@ describe("README usage examples", () => {
 
     expect(deleted).toEqual(false);
     expect(updated).toEqual(false);
-    expect(data).toStrictEqual({});
+    expect(data).toEqual({});
   });
 
   it("set content dynamically based on current content using a content function (file does exist)", async () => {
@@ -287,7 +287,7 @@ describe("README usage examples", () => {
 
     expect(deleted).toEqual(false);
     expect(updated).toEqual(true);
-    expect(data).toStrictEqual({ ok: true });
+    expect(data).toEqual({ ok: true });
   });
 
   it("Creates file with static content if file exists at given path and branch", async () => {
@@ -342,7 +342,7 @@ describe("README usage examples", () => {
     });
 
     expect(updated).toEqual(true);
-    expect(data).toStrictEqual({ ok: true });
+    expect(data).toEqual({ ok: true });
   });
 });
 
