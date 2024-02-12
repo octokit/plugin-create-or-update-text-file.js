@@ -22,7 +22,7 @@ type Result = {
 };
 
 /**
- * Normalizes the retrival of a repository file content.
+ * Normalizes the retrieval of a repository file content.
  *
  * The "Get repository content" API can respond in 4 different ways depending
  * on what exists at the given path
