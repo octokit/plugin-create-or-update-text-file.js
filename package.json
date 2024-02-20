@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@octokit/core": "^5.0.0",
-    "@octokit/tsconfig": "^2.0.0",
+    "@octokit/tsconfig": "^3.0.0",
     "@types/jest": "^29.5.2",
     "@types/node": "^20.0.0",
     "esbuild": "^0.20.0",
