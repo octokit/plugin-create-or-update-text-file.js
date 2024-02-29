@@ -10,7 +10,7 @@
 <!-- toc -->
 
 - [Usage](#usage)
-  - [Create custom Octokit contructor with plugin](#create-custom-octokit-contructor-with-plugin)
+  - [Create custom Octokit constructor with plugin](#create-custom-octokit-constructor-with-plugin)
   - [Create or update existing file with static content](#create-or-update-existing-file-with-static-content)
   - [deleting a file is possible by setting content to null](#deleting-a-file-is-possible-by-setting-content-to-null)
   - [set content dynamically based on current content using a content function](#set-content-dynamically-based-on-current-content-using-a-content-function)
@@ -67,7 +67,7 @@ const {
 </tbody>
 </table>
 
-### Create custom Octokit contructor with plugin
+### Create custom Octokit constructor with plugin
 
 ```js
 const MyOctokit = Octokit.plugin(createOrUpdateTextFile);
