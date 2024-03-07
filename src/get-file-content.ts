@@ -1,6 +1,6 @@
 import { RequestError } from "@octokit/request-error";
 import { Octokit } from "@octokit/core";
-import { base64ToUtf8 } from "./utils";
+import { base64ToUtf8 } from "./utils.js";
 
 type Options = {
   owner: string;

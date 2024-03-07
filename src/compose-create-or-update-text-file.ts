@@ -1,8 +1,12 @@
 import { Octokit } from "@octokit/core";
 
-import { getFileContents } from "./get-file-content";
-import type { Options, Response, ContentUpdateFunctionOptions } from "./types";
-import { utf8ToBase64 } from "./utils";
+import { getFileContents } from "./get-file-content.js";
+import type {
+  Options,
+  Response,
+  ContentUpdateFunctionOptions,
+} from "./types.js";
+import { utf8ToBase64 } from "./utils.js";
 
 /**
  *

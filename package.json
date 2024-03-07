@@ -3,6 +3,7 @@
   "publishConfig": {
     "access": "public"
   },
+  "type": "module",
   "version": "0.0.0-development",
   "description": "Convenience method to create/edit/delete a text file based on its current content",
   "scripts": {
@@ -10,7 +11,7 @@
     "lint": "prettier --check '{src,test}/**/*' README.md package.json",
     "lint:fix": "prettier --write '{src,test}/**/*' README.md package.json",
     "pretest": "npm run -s lint",
-    "test": "jest --coverage"
+    "test": "NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules\" npx jest --coverage"
   },
   "repository": "https://github.com/octokit/plugin-create-or-update-text-file.js",
   "keywords": [
@@ -19,11 +20,11 @@
   "author": "Gregor Martynus (https://dev.to/gr2m)",
   "license": "MIT",
   "dependencies": {
-    "@octokit/request-error": "^5.0.0",
+    "@octokit/request-error": "^6.0.0",
     "@octokit/types": "^12.0.0"
   },
   "devDependencies": {
-    "@octokit/core": "^5.0.0",
+    "@octokit/core": "^6.0.1",
     "@octokit/tsconfig": "^3.0.0",
     "@types/jest": "^29.5.2",
     "@types/node": "^20.0.0",
@@ -38,14 +39,18 @@
     "typescript": "^5.0.0"
   },
   "peerDependencies": {
-    "@octokit/core": ">= 5"
+    "@octokit/core": ">=6"
   },
   "jest": {
+    "extensionsToTreatAsEsm": [
+      ".ts"
+    ],
     "transform": {
       "^.+\\.(ts|tsx)$": [
         "ts-jest",
         {
-          "tsconfig": "test/tsconfig.test.json"
+          "tsconfig": "test/tsconfig.test.json",
+          "useESM": true
         }
       ]
     },
@@ -56,6 +61,9 @@
         "functions": 100,
         "lines": 100
       }
+    },
+    "moduleNameMapper": {
+      "^(.+)\\.jsx?$": "$1"
     }
   },
   "release": {
