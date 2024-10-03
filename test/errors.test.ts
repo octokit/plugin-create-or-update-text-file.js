@@ -3,6 +3,8 @@ import { Octokit } from "@octokit/core";
 
 import { createOrUpdateTextFile } from "../src";
 
+import { describe, test, expect } from "vitest";
+
 const MyOctokit = Octokit.plugin(createOrUpdateTextFile).defaults({
   userAgent: "test",
 });

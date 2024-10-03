@@ -1,4 +1,5 @@
 import { createOrUpdateTextFile, composeCreateOrUpdateTextFile } from "../src";
+import { describe, it, expect } from "vitest";
 
 describe("createOrUpdateTextFile", () => {
   it("is a function", () => {
