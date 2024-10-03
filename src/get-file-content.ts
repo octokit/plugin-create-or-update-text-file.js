@@ -1,5 +1,5 @@
 import { RequestError } from "@octokit/request-error";
-import { Octokit } from "@octokit/core";
+import type { Octokit } from "@octokit/core";
 import { base64ToUtf8 } from "./utils.js";
 
 type Options = {
@@ -55,7 +55,7 @@ export async function getFileContents(
   const { data } = await octokit
     .request(route, getContentsParameters)
     .catch((error: RequestError) => {
-      /* istanbul ignore if */
+      /* v8 ignore next */
       if (error.status !== 404) throw error;
 
       return {
@@ -98,11 +98,10 @@ export async function getFileContents(
       content: base64ToUtf8(data.content),
       sha: data.sha,
     };
+    /* v8 ignore start */
   } catch (error: any) {
-    /* istanbul ignore next */
     if (error.message !== "URI malformed") throw error;
 
-    /* istanbul ignore next error is only thrown in browsers, not node. */
     throw new RequestError(
       `[@octokit/plugin-create-or-update-text-file] ${requestOptions.url} is a binary file, only text files are supported`,
       403,
@@ -111,4 +110,5 @@ export async function getFileContents(
       },
     );
   }
+  /* v8 ignore stop */
 }

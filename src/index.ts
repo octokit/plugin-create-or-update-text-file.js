@@ -1,4 +1,4 @@
-import { Octokit } from "@octokit/core";
+import type { Octokit } from "@octokit/core";
 
 import { composeCreateOrUpdateTextFile } from "./compose-create-or-update-text-file.js";
 import { VERSION } from "./version.js";
