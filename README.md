@@ -135,7 +135,9 @@ const { updated, deleted, data } = await octokit.createOrUpdateTextFile({
 ```js
 const octokit = new Octokit({ auth: "secret123" });
 
-await { updated, deleted, data } = await createOrUpdateTextFile(octokit, {
+const octokitInstance = await createOrUpdateTextFile(octokit);
+
+await { updated, deleted, data } = octokitInstance.createOrUpdate({
   owner: "octocat",
   repo: "hello-world",
   path: "test.txt",
