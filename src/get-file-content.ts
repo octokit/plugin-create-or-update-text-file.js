@@ -6,14 +6,14 @@ type Options = {
   owner: string;
   repo: string;
   path: string;
-  branch?: string;
+  branch?: string | undefined;
 };
 
 type GetContentsParameters = {
   owner: string;
   repo: string;
   path: string;
-  ref?: string;
+  ref?: string | undefined;
 };
 
 type Result = {
@@ -53,6 +53,7 @@ export async function getFileContents(
   const requestOptions = octokit.request.endpoint(route, getContentsParameters);
 
   const { data } = await octokit
+    // @ts-expect-error This type comes from @octokit/openapi-types, not much we can do to fix it
     .request(route, getContentsParameters)
     .catch((error: RequestError) => {
       /* v8 ignore next */
