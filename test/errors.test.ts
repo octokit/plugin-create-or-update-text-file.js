@@ -29,7 +29,7 @@ describe("README usage examples", () => {
       },
     });
 
-    expect(() =>
+    await expect(() =>
       octokit.createOrUpdateTextFile({
         owner: "octocat",
         repo: "hello-world",
@@ -63,7 +63,7 @@ describe("README usage examples", () => {
       },
     });
 
-    expect(() =>
+    await expect(() =>
       octokit.createOrUpdateTextFile({
         owner: "octocat",
         repo: "hello-world",
@@ -100,7 +100,7 @@ describe("README usage examples", () => {
       },
     });
 
-    expect(() =>
+    await expect(() =>
       octokit.createOrUpdateTextFile({
         owner: "octocat",
         repo: "hello-world",
