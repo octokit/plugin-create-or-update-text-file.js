@@ -1,4 +1,3 @@
-/* v8 ignore start */
 // universal implementation of nodeUtf8ToBase64/nodeBase64ToUtf8 methods for browsers, Node, and Deno.
 //
 // - good docs on base64
@@ -54,5 +53,3 @@ function browserBase64ToUtf8(data: string) {
 
 export const utf8ToBase64 = isNode ? nodeUtf8ToBase64 : browserUtf8ToBase64;
 export const base64ToUtf8 = isNode ? nodeBase64ToUtf8 : browserBase64ToUtf8;
-
-/* v8 ignore stop */
