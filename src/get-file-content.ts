@@ -112,5 +112,4 @@ export async function getFileContents(
       },
     );
   }
-  /* v8 ignore stop -- @preserve */
 }
