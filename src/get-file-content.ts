@@ -56,7 +56,7 @@ export async function getFileContents(
     // @ts-expect-error This type comes from @octokit/openapi-types, not much we can do to fix it
     .request(route, getContentsParameters)
     .catch((error: RequestError) => {
-      /* v8 ignore next */
+      /* v8 ignore next -- @preserve */
       if (error.status !== 404) throw error;
 
       return {
@@ -99,7 +99,7 @@ export async function getFileContents(
       content: base64ToUtf8(data.content),
       sha: data.sha,
     };
-    /* v8 ignore start */
+    /* v8 ignore start -- @preserve */
   } catch (error: any) {
     if (error.message !== "URI malformed") throw error;
 
@@ -111,5 +111,5 @@ export async function getFileContents(
       },
     );
   }
-  /* v8 ignore stop */
+  /* v8 ignore stop -- @preserve */
 }
